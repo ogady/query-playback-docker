@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  percona-playback:
+    platform: linux/amd64
+    container_name: percona-playback
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./slowquery:/volume_dir
